@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squeaky Clean Floors - Floor Sanding & Polishing Services in Montgomery, AL</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A',
+                            orange: '#F97316',
+                            light: '#F3F4F6',
+                            dark: '#0F172A',
+                            accent: '#3B82F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+       
+.bg-brand-navy.text-white.text-xs.py-2.px-4 {
+    background: #0f172a  var(--tw-gradient-to-position);;
+}
+
+        /* Custom 3D Carousel Perspective & Styling */
+        .carousel-3d-container {
+            perspective: 1000px;
+        }
+        .carousel-3d-stage {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .carousel-card {
+            transition: all 0.5s ease;
+        }
+        
+        /* Service Image Overlay Center Pop Up Effect */
+        .service-card .overlay {
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .service-card:hover .overlay {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* FAQ Accordion Styling */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E3A8A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F97316;
+        }
+
+        /* Floating WhatsApp Bounce */
+        @keyframes subtle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .wa-float {
+            animation: subtle-bounce 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- ================= HEADER SECTION ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300">
+        <div class="bg-brand-navy text-white text-xs py-2 px-4">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brand-orange"></i> 1601 East Trinity Blvd Montgomery, AL 36106</span>
+                    <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-clock text-brand-orange"></i> Mon - Sun 7:30 AM–6:30 PM</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="tel:3344256259" class="hover:text-brand-orange transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-orange"></i> (334) 425-6259</a>
+                    <a href="mailto:bottcher805@gmail.com" class="hover:text-brand-orange transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-orange"></i> bottcher805@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo Left Side -->
+                <a href="#home" onclick="navigateTo('home')" class="flex items-center gap-3 group">
+                    <!-- Clean SVG Logo matching user provided brand asset -->
+                   <img src="Squeaky Clean Floors.png">
+                    <div class="flex flex-col">
+                        
+                        
+                    </div>
+                </a>
+
+                <!-- Right Side Navigation Menu Desktop -->
+                <nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm tracking-wide">
+                    <button onclick="navigateTo('home')" id="nav-home" class="nav-link text-brand-orange hover:text-brand-orange transition-colors">Home</button>
+                    <button onclick="navigateTo('about')" id="nav-about" class="nav-link hover:text-brand-orange transition-colors">About Us</button>
+                    <button onclick="navigateTo('services')" id="nav-services" class="nav-link hover:text-brand-orange transition-colors">Services</button>
+                    <button onclick="navigateTo('blogs')" id="nav-blogs" class="nav-link hover:text-brand-orange transition-colors">Blogs</button>
+                    <button onclick="navigateTo('contact')" id="nav-contact" class="nav-link hover:text-brand-orange transition-colors">Contact Us</button>
+                    
+                    <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-brand-orange to-amber-500 hover:from-amber-600 hover:to-brand-orange text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <span>Get A Quote</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="lg:hidden flex items-center gap-3">
+                    <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="bg-brand-orange text-white text-xs px-3 py-2 rounded-lg font-bold">Quote</a>
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-700 hover:text-brand-blue focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Mobile Navigation Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 font-semibold text-gray-700 hover:bg-gray-100 rounded-md">Home</button>
+            <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 font-semibold text-gray-700 hover:bg-gray-100 rounded-md">About Us</button>
+            <button onclick="navigateTo('services'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 font-semibold text-gray-700 hover:bg-gray-100 rounded-md">Services</button>
+            <button onclick="navigateTo('blogs'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 font-semibold text-gray-700 hover:bg-gray-100 rounded-md">Blogs</button>
+            <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 font-semibold text-gray-700 hover:bg-gray-100 rounded-md">Contact Us</button>
+            <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="block text-center bg-brand-blue text-white px-4 py-3 rounded-xl font-bold mt-2">Get A Quote on GMB</a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN MULTI-PAGE BODY CONTAINER ================= -->
+    <main class="flex-grow">
+
+        <!-- ***************** PAGE 1: HOME PAGE ***************** -->
+        <div id="page-home" class="page-content">
+            
+            <!-- 1st Section: Hero Banner (50% Split with 3D Image Slider) -->
+            <section class="relative bg-gradient-to-br from-slate-900 via-brand-dark to-slate-900 text-white overflow-hidden py-16 lg:py-24">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        
+                        <!-- 50% Left Text Content -->
+                        <div class="space-y-6 text-center lg:text-left">
+                            <span class="inline-block bg-brand-orange/20 text-brand-orange border border-brand-orange/40 text-xs sm:text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
+                                #1 Premium Floor Care in Montgomery, AL
+                            </span>
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                                Restore Brilliance to Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-400">Wood & Stone Floors</span>
+                            </h1>
+                            <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                                Squeaky Clean Floors delivers master-grade <strong class="text-white">wood floor refinishing</strong>, deep carpet revitalization, and stone polishing. Experience flawless craftsmanship, unmatched shine, and lasting durability for your home or business.
+                            </p>
+                            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-orange-500/30 transition-all duration-300 text-center flex items-center justify-center gap-3">
+                                    <span>Get A Free Quote</span>
+                                    <i class="fa-solid fa-calculator"></i>
+                                </a>
+                                <a href="tel:3344256259" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg backdrop-blur-sm transition-all duration-300 text-center flex items-center justify-center gap-3">
+                                    <i class="fa-solid fa-phone text-brand-orange"></i>
+                                    <span>(334) 425-6259</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 50% Right Interactive 3D Image Carousel -->
+                        <div class="relative w-full flex flex-col items-center">
+                            <div class="carousel-3d-container w-full h-[320px] sm:h-[400px] relative flex items-center justify-center overflow-hidden rounded-2xl bg-slate-800/50 border border-slate-700/50 p-4">
+                                <div id="hero-slider" class="w-full h-full relative flex items-center justify-center">
+                                    <!-- Slide items dynamically positioned via JS -->
+                                    <div class="carousel-card absolute w-full max-w-[420px] h-72 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
+                                        <img src="https://plus.unsplash.com/premium_photo-1676810460522-bc963e5554d8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Carpet Cleaning Services" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                                            <h3 class="text-white text-xl font-bold">Carpet Cleaning Services</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-card absolute w-full max-w-[420px] h-72 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
+                                        <img src="https://plus.unsplash.com/premium_photo-1683129702682-052e26a0562f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Wood Floor Refinishing" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                                            <h3 class="text-white text-xl font-bold">Wood Floor Refinishing</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-card absolute w-full max-w-[420px] h-72 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
+                                        <img src="https://plus.unsplash.com/premium_photo-1664303201536-bee55cef0d18?q=80&w=924&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Stone Restoration" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                                            <h3 class="text-white text-xl font-bold">Stone Restoration</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-card absolute w-full max-w-[420px] h-72 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
+                                        <img src="https://plus.unsplash.com/premium_photo-1679775635467-630c72a1a7b6?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Home Rug Cleaning Services" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                                            <h3 class="text-white text-xl font-bold">Home Rug Cleaning Services</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Left & Right Controls -->
+                                <button onclick="rotateCarousel(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-brand-orange text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg">
+                                    <i class="fa-solid fa-chevron-left text-lg"></i>
+                                </button>
+                                <button onclick="rotateCarousel(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-brand-orange text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg">
+                                    <i class="fa-solid fa-chevron-right text-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2nd Section: About Us (50% Text & 50% Image) -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <!-- 50% Left Text -->
+                        <div class="space-y-6">
+                            <div class="inline-flex items-center gap-2 text-brand-orange font-bold text-sm tracking-wider uppercase">
+                                <i class="fa-solid fa-broom"></i>
+                                <span>About Squeaky Clean Floors</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                                Montgomery’s Most Trusted Floor Sanding & Refinishing Specialists
+                            </h2>
+                            <p class="text-gray-600 text-base leading-relaxed">
+                                Squeaky Clean Floors, your trusted provider of Floor sanding and polishing service, Wood Floor Refinishing, and Carpet & Rug Cleaning in Montgomery, AL, USA. We deliver expert care for every type of flooring, restoring beauty, shine, and longevity to your home or business.
+                            </p>
+                            <p class="text-gray-600 text-base leading-relaxed">
+                                Using advanced techniques and high-quality products, this service ensures spotless, polished, and revitalized floors that impress. From deep carpet cleaning to flawless wood refinishing and professional sanding, every detail is handled with precision.
+                            </p>
+                            <div class="pt-4">
+                                <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="inline-flex items-center gap-3 bg-brand-blue hover:bg-blue-900 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-md">
+                                    <span>Get A Quote</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 50% Right Image -->
+                        <div class="relative">
+                            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 group">
+                                <img src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Squeaky Clean Floors Team Working" class="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 bg-brand-orange text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+                                <p class="text-3xl font-black">100%</p>
+                                <p class="text-sm font-semibold">Satisfaction Guaranteed on Every Floor Restoration Project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3rd Section: Services Grid (8 Services - 4 per row) -->
+            <section class="py-20 bg-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-brand-orange font-bold text-sm tracking-widest uppercase">Our Core Expertise</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Comprehensive Floor Cleaning & Restoration Services</h2>
+                        <div class="w-20 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+                    </div>
+
+                    <!-- Grid Layout: 4 columns on large screens -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="home-services-grid">
+                        <!-- Services generated dynamically by JS for maintainability -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4th Section: Why Choose Us (50% Tiles & 50% Image) -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <!-- 50% Left Tiles Feature Grid -->
+                        <div class="space-y-8">
+                            <div>
+                                <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">Why Choose Us</span>
+                                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">The Unmatched Squeaky Clean Standard</h2>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-brand-orange transition-colors">
+                                    <div class="w-12 h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-slate-900 mb-2">Licensed & Experienced</h3>
+                                    <p class="text-sm text-gray-600">Years of specialized craftsmanship in wood sanding, buffing, and stone care.</p>
+                                </div>
+
+                                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-brand-orange transition-colors">
+                                    <div class="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-slate-900 mb-2">Advanced Equipment</h3>
+                                    <p class="text-sm text-gray-600">State-of-the-art dustless sanding systems and powerful steam extraction tech.</p>
+                                </div>
+
+                                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-brand-orange transition-colors">
+                                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                        <i class="fa-solid fa-leaf"></i>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-slate-900 mb-2">Eco-Friendly Sealants</h3>
+                                    <p class="text-sm text-gray-600">Non-toxic, safe cleaning solutions and low-VOC durable polyurethane finishes.</p>
+                                </div>
+
+                                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-brand-orange transition-colors">
+                                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                        <i class="fa-solid fa-clock"></i>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-slate-900 mb-2">Punctual & Reliable</h3>
+                                    <p class="text-sm text-gray-600">Operating 7 days a week from 7:30 AM to 6:30 PM for maximum customer convenience.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 50% Right Image -->
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                            <img src="https://images.unsplash.com/photo-1758273238415-01ec03d9ef27?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Why Choose Squeaky Clean Floors" class="w-full h-[480px] object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5th Section: Customer Reviews Slider (6 USA Reviews, 2 per slide) -->
+            <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-14">
+                        <span class="text-brand-orange font-bold text-sm tracking-widest uppercase">Client Testimonials</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">What Our Montgomery Clients Say</h2>
+                    </div>
+
+                    <!-- Reviews Carousel Container -->
+                    <div class="relative max-w-5xl mx-auto">
+                        <div id="reviews-slider" class="overflow-hidden">
+                            <div id="reviews-track" class="flex transition-transform duration-500 ease-in-out">
+                                
+                                <!-- Slide 1 (2 Reviews) -->
+                                <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-white mb-2">Michael Miller</h3>
+                                            <p class="text-gray-300 text-sm leading-relaxed mb-4">"Squeaky Clean Floors completely refinished our aged oak hardwood floors in Montgomery. The smooth finish and rich shine are absolutely outstanding!"</p>
+                                        </div>
+                                        <div class="flex text-amber-400 gap-1 text-base">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-white mb-2">Sarah Jenkins</h3>
+                                            <p class="text-gray-300 text-sm leading-relaxed mb-4">"The deep carpet cleaning service eliminated tough stains we thought were permanent. Professional team, fast arrival, and immaculate work across our home!"</p>
+                                        </div>
+                                        <div class="flex text-amber-400 gap-1 text-base">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 (2 Reviews) -->
+                                <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-white mb-2">David Thompson</h3>
+                                            <p class="text-gray-300 text-sm leading-relaxed mb-4">"Their stone restoration team brought our dull marble foyer back to a brilliant mirror finish. Highly recommend them for high-end Montgomery residences."</p>
+                                        </div>
+                                        <div class="flex text-amber-400 gap-1 text-base">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-white mb-2">Emily Davis</h3>
+                                            <p class="text-gray-300 text-sm leading-relaxed mb-4">"Fantastic grout cleaning service! Our kitchen tiles look as brand new as the day they were installed. Prompt, polite, and very affordable."</p>
+                                        </div>
+                                        <div class="flex text-amber-400 gap-1 text-base">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 (2 Reviews) -->
+                                <div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-white mb-2">Robert Anderson</h3>
+                                            <p class="text-gray-300 text-sm leading-relaxed mb-4">"Great experience with hardwood buffing! They were punctual, respected our furniture, and left zero dust behind. Best floor contractors in AL."</p>
+                                        </div>
+                                        <div class="flex text-amber-400 gap-1 text-base">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-white mb-2">Jessica Martinez</h3>
+                                            <p class="text-gray-300 text-sm leading-relaxed mb-4">"Squeaky Clean Floors restored our heavy traffic area rugs with unbelievable precision. Friendly service from phone booking to final inspection."</p>
+                                        </div>
+                                        <div class="flex text-amber-400 gap-1 text-base">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Review Carousel Nav Controls -->
+                        <div class="flex justify-center items-center gap-4 mt-8">
+                            <button onclick="prevReviewSlide()" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-orange border border-slate-700 text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <div class="flex gap-2" id="review-dots">
+                                <span onclick="goToReviewSlide(0)" class="w-3 h-3 rounded-full bg-brand-orange cursor-pointer"></span>
+                                <span onclick="goToReviewSlide(1)" class="w-3 h-3 rounded-full bg-slate-700 cursor-pointer"></span>
+                                <span onclick="goToReviewSlide(2)" class="w-3 h-3 rounded-full bg-slate-700 cursor-pointer"></span>
+                            </div>
+                            <button onclick="nextReviewSlide()" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-orange border border-slate-700 text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6th Section: Frequently Asked Questions (50% Accordion & 50% Image) -->
+            <section class="py-20 bg-white" id="faq-section">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-14">
+                        <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">Got Questions?</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <!-- 50% Left Accordion Items using <details> & <summary> -->
+                        <div class="space-y-4">
+                            
+                            <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all duration-300 open:bg-blue-50/50 open:border-brand-blue">
+                                <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer select-none">
+                                    <span>What carpet cleaning services do you provide in Montgomery?</span>
+                                    <span class="faq-icon transition-transform duration-300 text-brand-orange">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </summary>
+                                <p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
+                                    We offer deep extraction, stain removal, odor elimination, and eco-friendly conditioning for all carpet types. Our advanced hot-water extraction restores plush softness and cleanliness.
+                                </p>
+                            </details>
+
+                            <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all duration-300 open:bg-blue-50/50 open:border-brand-blue">
+                                <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer select-none">
+                                    <span>How do I find professional wood floor refinishing near me?</span>
+                                    <span class="faq-icon transition-transform duration-300 text-brand-orange">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </summary>
+                                <p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
+                                    Squeaky Clean Floors is Montgomery’s premier choice. We provide virtually dustless sanding, custom stain matching, and protective topcoats right at your doorstep.
+                                </p>
+                            </details>
+
+                            <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all duration-300 open:bg-blue-50/50 open:border-brand-blue">
+                                <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer select-none">
+                                    <span>Why is stone restoration near me recommended for natural surfaces?</span>
+                                    <span class="faq-icon transition-transform duration-300 text-brand-orange">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </summary>
+                                <p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
+                                    Natural stone like marble, granite, and travertine loses luster over time. Professional restoration removes etches, seals pores, and brings out vibrant original natural polish.
+                                </p>
+                            </details>
+
+                            <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all duration-300 open:bg-blue-50/50 open:border-brand-blue">
+                                <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer select-none">
+                                    <span>Are your home rug cleaning services safe for oriental wool rugs?</span>
+                                    <span class="faq-icon transition-transform duration-300 text-brand-orange">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </summary>
+                                <p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
+                                    Yes, we utilize pH-balanced gentle solutions tailored specifically for fine fibers, delicate wools, and antique oriental area rugs without color bleeding.
+                                </p>
+                            </details>
+
+                            <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all duration-300 open:bg-blue-50/50 open:border-brand-blue">
+                                <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer select-none">
+                                    <span>Why hire floor polishing services in Montgomery, AL?</span>
+                                    <span class="faq-icon transition-transform duration-300 text-brand-orange">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </summary>
+                                <p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-3">
+                                    Professional polishing creates a high-gloss protective barrier that guards against scratches, scuffs, and dirt buildup while elevating interior property aesthetics.
+                                </p>
+                            </details>
+
+                        </div>
+
+                        <!-- 50% Right Image -->
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                            <img src="https://plus.unsplash.com/premium_photo-1664910556213-4395ebca30c2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Squeaky Clean Floors FAQ" class="w-full h-[460px] object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7th Section: Contact Info & Google Map (50% Split) -->
+            <section class="py-20 bg-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                        
+                        <!-- 50% Left Contact Details with Flat Icons -->
+                        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col justify-between border border-slate-200">
+                            <div>
+                                <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">Reach Out Today</span>
+                                <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-8">Contact Information</h2>
+
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-orange flex items-center justify-center flex-shrink-0 text-xl">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Phone Number</h4>
+                                            <a href="tel:3344256259" class="text-gray-700 hover:text-brand-orange font-semibold text-lg">(334) 425-6259</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-2xl bg-blue-100 text-brand-blue flex items-center justify-center flex-shrink-0 text-xl">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Address</h4>
+                                            <p class="text-gray-700 font-medium">1601 East Trinity Blvd Montgomery, AL 36106, USA</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xl">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Business Email</h4>
+                                            <a href="mailto:bottcher805@gmail.com" class="text-gray-700 hover:text-brand-orange font-medium">bottcher805@gmail.com</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0 text-xl">
+                                            <i class="fa-solid fa-clock"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Business Hours</h4>
+                                            <p class="text-gray-700 font-medium">Mon - Sun: 7:30 AM – 6:30 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-6 border-t border-gray-100 flex gap-4">
+                                <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="w-full text-center bg-brand-blue hover:bg-blue-900 text-white font-bold py-3.5 rounded-xl transition-all shadow-md">
+                                    Open Google Maps
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 50% Right Google Map Embed -->
+                        <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 min-h-[380px] h-full">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d623711.9112001468!2d-86.5405739!3d32.9697205!3m2!1i1024!1i768!4f13.1!3m3!1m2!1s0x142d7b1f57b7b53%3A0x3f3bfdc5b1cee961!2sSqueaky%20Clean%20Floors!5e1!3m2!1sen!2s!4v1793978216923!5m2!1sen!2s" class="w-full h-full min-h-[400px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8th Section: Get Appointment Form & Counter Stats (50% Split) -->
+            <section class="py-20 bg-slate-900 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        
+                        <!-- 50% Left Appointment Email Form -->
+                        <div class="bg-slate-800 p-8 sm:p-10 rounded-3xl border border-slate-700 shadow-2xl">
+                            <h3 class="text-2xl font-black text-white mb-2">Get Appointment</h3>
+                            <p class="text-gray-400 text-sm mb-6">Schedule your floor inspection and consultation directly with our experts.</p>
+                            
+                            <form action="mailto:bottcher805@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-1">Your Full Name</label>
+                                    <input type="text" required placeholder="John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange">
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-1">Phone Number</label>
+                                        <input type="tel" required placeholder="(334) 000-0000" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-1">Requested Service</label>
+                                        <select class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange">
+                                            <option>Wood Floor Refinishing</option>
+                                            <option>Carpet Cleaning</option>
+                                            <option>Stone Restoration</option>
+                                            <option>Tile & Grout Cleaning</option>
+                                            <option>Other Services</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-1">Message / Notes</label>
+                                    <textarea rows="3" placeholder="Describe your flooring project..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-brand-orange to-amber-500 hover:from-amber-600 hover:to-brand-orange text-white font-bold py-4 rounded-xl shadow-lg transition-all text-center">
+                                    Send Appointment Request
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- 50% Right Business Counter Stats -->
+                        <div class="space-y-8">
+                            <div>
+                                <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">Our Track Record</span>
+                                <h2 class="text-3xl font-extrabold text-white mt-2">Delivering Flooring Excellence Every Day</h2>
+                                <p class="text-gray-400 text-sm mt-3">We take pride in turning tired, worn-out surfaces into pristine architectural features.</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center">
+                                    <i class="fa-solid fa-layer-group text-3xl text-brand-orange mb-2"></i>
+                                    <p class="text-3xl font-black text-white">1,450+</p>
+                                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Floors Refinished</p>
+                                </div>
+
+                                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center">
+                                    <i class="fa-solid fa-face-smile text-3xl text-brand-blue mb-2"></i>
+                                    <p class="text-3xl font-black text-white">99%</p>
+                                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Happy Clients</p>
+                                </div>
+
+                                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center">
+                                    <i class="fa-solid fa-calendar-check text-3xl text-emerald-500 mb-2"></i>
+                                    <p class="text-3xl font-black text-white">12+</p>
+                                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Years Experience</p>
+                                </div>
+
+                                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center">
+                                    <i class="fa-solid fa-map-location-dot text-3xl text-amber-400 mb-2"></i>
+                                    <p class="text-3xl font-black text-white">100%</p>
+                                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Montgomery Coverage</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9th Home Section: Featured Blogs (3 Blogs Preview) -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+                        <div>
+                            <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">Expert Advice</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Latest Flooring Insights</h2>
+                        </div>
+                        <button onclick="navigateTo('blogs')" class="mt-4 md:mt-0 text-brand-blue hover:text-brand-orange font-bold flex items-center gap-2 transition-colors">
+                            <span>View All 5 Articles</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="home-blogs-container">
+                        <!-- First 3 blogs render here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ***************** PAGE 2: ABOUT US PAGE ***************** -->
+        <div id="page-about" class="page-content hidden">
+            <!-- Header Banner -->
+            <section class="bg-slate-900 text-white py-16 text-center relative">
+                <h1 class="text-4xl font-extrabold">About Squeaky Clean Floors</h1>
+                <p class="text-gray-400 mt-2">Dedicated Floor Sanding & Polishing Craftsmen in Montgomery, AL</p>
+            </section>
+
+            <!-- Detailed About Content -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <h2 class="text-3xl font-extrabold text-slate-900">Over A Decade of Flooring Rejuvenation</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Squeaky Clean Floors, your trusted provider of Floor sanding and polishing service, Wood Floor Refinishing, and Carpet & Rug Cleaning in Montgomery, AL, USA. We deliver expert care for every type of flooring, restoring beauty, shine, and longevity to your home or business.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Using advanced techniques and high-quality products, this service ensures spotless, polished, and revitalized floors that impress. From deep carpet cleaning to flawless wood refinishing and professional sanding, every detail is handled with precision. Call now (334) 425-6259 to refresh and transform your floors today!
+                            </p>
+                            <div>
+                                <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="bg-brand-orange text-white px-8 py-3.5 rounded-xl font-bold inline-block shadow-md">Get A Quote on GMB</a>
+                            </div>
+                        </div>
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="About Us Floor Work" class="w-full h-96 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Embedded FAQ on About Page -->
+            <section class="py-16 bg-slate-50">
+                <div class="max-w-5xl mx-auto px-4">
+                    <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-10">Frequently Asked Questions</h2>
+                    <div class="space-y-4" id="about-faq-container">
+                        <!-- Mirror of Home FAQ accordions -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ***************** PAGE 3: SERVICES PAGE ***************** -->
+        <div id="page-services" class="page-content hidden">
+            <section class="bg-slate-900 text-white py-16 text-center">
+                <h1 class="text-4xl font-extrabold">All Professional Services</h1>
+                <p class="text-gray-400 mt-2">Restoring Wood, Carpet, Tile, & Natural Stone Across Montgomery, AL</p>
+            </section>
+
+            <section class="py-20 bg-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Complete 8 services grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="all-services-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ***************** PAGE 4: BLOGS PAGE (5 FULL SEO ARTICLES) ***************** -->
+        <div id="page-blogs" class="page-content hidden">
+            <section class="bg-slate-900 text-white py-16 text-center">
+                <h1 class="text-4xl font-extrabold">Floor Care Knowledge Hub</h1>
+                <p class="text-gray-400 mt-2">Comprehensive guides & expert recommendations for home and business owners</p>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="all-blogs-grid">
+                        <!-- 5 Blog Cards Rendered Here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ***************** PAGE 5: CONTACT US PAGE ***************** -->
+        <div id="page-contact" class="page-content hidden">
+            <section class="bg-slate-900 text-white py-16 text-center">
+                <h1 class="text-4xl font-extrabold">Contact Squeaky Clean Floors</h1>
+                <p class="text-gray-400 mt-2">We are available 7 days a week for all your flooring needs</p>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Info Cards -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-6">
+                            <h2 class="text-2xl font-bold text-slate-900">Get In Touch</h2>
+                            <div class="space-y-4">
+                                <p class="flex items-center gap-3 text-slate-700">
+                                    <i class="fa-solid fa-phone text-brand-orange text-xl"></i>
+                                    <span><strong>Phone:</strong> (334) 425-6259</span>
+                                </p>
+                                <p class="flex items-center gap-3 text-slate-700">
+                                    <i class="fa-solid fa-location-dot text-brand-blue text-xl"></i>
+                                    <span><strong>Address:</strong> 1601 East Trinity Blvd Montgomery, AL 36106, USA</span>
+                                </p>
+                                <p class="flex items-center gap-3 text-slate-700">
+                                    <i class="fa-solid fa-envelope text-emerald-600 text-xl"></i>
+                                    <span><strong>Email:</strong> bottcher805@gmail.com</span>
+                                </p>
+                                <p class="flex items-center gap-3 text-slate-700">
+                                    <i class="fa-solid fa-clock text-amber-500 text-xl"></i>
+                                    <span><strong>Hours:</strong> Mon - Sun 7:30 AM–6:30 PM</span>
+                                </p>
+                            </div>
+                            <div class="pt-4">
+                                <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="block text-center bg-brand-orange text-white py-3 rounded-xl font-bold">View Google My Business Profile</a>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Appointment Form -->
+                        <div class="bg-slate-900 text-white p-8 rounded-3xl space-y-4">
+                            <h2 class="text-2xl font-bold">Request A Free Quotation</h2>
+                            <form action="mailto:bottcher805@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+                                <input type="text" placeholder="Full Name" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-xl text-white">
+                                <input type="email" placeholder="Email Address" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-xl text-white">
+                                <input type="tel" placeholder="Phone Number" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-xl text-white">
+                                <textarea placeholder="Service Details" rows="4" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-xl text-white"></textarea>
+                                <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 font-bold py-3.5 rounded-xl">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- ================= MODAL LIGHTBOXES ================= -->
+    <!-- Service Image Full Popup Modal -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="relative bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl animate-fade-in">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 hover:bg-red-600 text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="modal-service-img" src="" alt="Service Image" class="w-full h-80 object-cover">
+            <div class="p-6">
+                <h3 id="modal-service-title" class="text-2xl font-bold text-slate-900 mb-2"></h3>
+                <p id="modal-service-desc" class="text-gray-600 text-sm leading-relaxed mb-6"></p>
+                <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="inline-block bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-md">Get A Quote on GMB</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full 800+ Word SEO Blog Reader Modal -->
+    <div id="blog-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="relative bg-white rounded-3xl max-w-4xl w-full my-8 overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
+            <!-- Fixed Header -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-200 bg-slate-50">
+                <h3 id="blog-modal-title" class="text-xl sm:text-2xl font-bold text-slate-900"></h3>
+                <button onclick="closeBlogModal()" class="w-10 h-10 rounded-full bg-gray-200 hover:bg-red-500 hover:text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <!-- Scrollable Content -->
+            <div class="p-6 sm:p-10 overflow-y-auto space-y-6 text-slate-700 leading-relaxed text-base" id="blog-modal-body">
+                <!-- Injected Article Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FLOATING WHATSAPP ICON ================= -->
+    <a href="https://wa.me/13344256259" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 wa-float bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="bg-slate-950 text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- 3 Column Split Layout (33.33% Each) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
+                
+                <!-- Column 1: Logo & ~40-word Brand Description -->
+                <div class="space-y-4">
+                  <img src="Squeaky Clean Floors.png">
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Squeaky Clean Floors is Montgomery's premier floor sanding, wood refinishing, and carpet cleaning specialist. We restore high-traffic hardwood, marble, rug, and tile surfaces to flawless perfection with expert precision.
+                    </p>
+                </div>
+
+                <!-- Column 2: Navigation Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-white uppercase tracking-wider border-b border-slate-800 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400 font-medium">
+                        <li><button onclick="navigateTo('home')" class="hover:text-brand-orange transition-colors">Home</button></li>
+                        <li><button onclick="navigateTo('about')" class="hover:text-brand-orange transition-colors">About Us</button></li>
+                        <li><button onclick="navigateTo('services')" class="hover:text-brand-orange transition-colors">Services</button></li>
+                        <li><button onclick="navigateTo('blogs')" class="hover:text-brand-orange transition-colors">Blogs</button></li>
+                        <li><button onclick="navigateTo('contact')" class="hover:text-brand-orange transition-colors">Contact Us</button></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-white uppercase tracking-wider border-b border-slate-800 pb-2 inline-block">Contact Information</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-orange mt-1"></i>
+                            <span>1601 East Trinity Blvd Montgomery, AL 36106, USA</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-blue"></i>
+                            <a href="tel:3344256259" class="hover:text-white">(334) 425-6259</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-emerald-500"></i>
+                            <a href="mailto:bottcher805@gmail.com" class="hover:text-white">bottcher805@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-amber-400"></i>
+                            <span>Mon - Sun 7:30 AM–6:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Line -->
+            <div class="pt-8 text-center text-xs text-gray-500">
+                <p>© 2026 All Rights Reserved By The Ranking Geeks</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // Data Structures for Services
+        const servicesData = [
+            {
+                id: 1,
+                title: "Wood floor sanding service",
+                image: "https://plus.unsplash.com/premium_photo-1683129702682-052e26a0562f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-dumpster",
+                desc: "Our professional wood floor sanding service removes deep scratches, old polyurethane coatings, and surface imperfections. We use specialized dust-containment systems to prepare hardwood surfaces for smooth, gorgeous refinishing."
+            },
+            {
+                id: 2,
+                title: "Tile floor cleaning service",
+                image: "https://images.unsplash.com/photo-1740657254989-42fe9c3b8cce?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-border-all",
+                desc: "Restore high-shine cleanliness to ceramic, porcelain, and stone tile installations. Our high-pressure extraction process lifts embedded grime from tiles and restores uniform shine without scratching decorative surface glaze."
+            },
+            {
+                id: 3,
+                title: "Carpet cleaning",
+                image: "https://images.unsplash.com/photo-1778062868373-e3cb41963ae5?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-rug",
+                desc: "Deep steam carpet cleaning designed to neutralize allergens, remove pet stains, and eliminate trapped dust. We restore soft texture, vibrant color, and clean fresh fragrance to residential and commercial carpets."
+            },
+            {
+                id: 4,
+                title: "Stone polishing service",
+                image: "https://images.unsplash.com/photo-1684793314416-6bebc53929cc?q=80&w=942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-gem",
+                desc: "Expert diamond abrasive stone polishing service for marble, granite, quartz, and travertine. We remove dull etching and seal pores to reveal a mirror-like crystalline gloss on natural stone floors."
+            },
+            {
+                id: 5,
+                title: "Hardwood floor buffing service",
+                image: "https://plus.unsplash.com/premium_photo-1683129702682-052e26a0562f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-dharmachakra",
+                desc: "High-speed hardwood floor buffing removes scuffs, light surface scratches, and minor dullness. It applies protective maintenance coats without needing complete floor sanding, extending hardwood lifespan."
+            },
+            {
+                id: 6,
+                title: "Floor maintenance service",
+                image: "https://plus.unsplash.com/premium_photo-1683129616171-8d7b759b354c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-screwdriver-wrench",
+                desc: "Scheduled floor maintenance service plans customized for businesses and homeowners. Includes systematic cleaning, protective topcoat applications, inspection, and high-gloss buffing for lasting beauty."
+            },
+            {
+                id: 7,
+                title: "Upholstery cleaning service",
+                image: "https://plus.unsplash.com/premium_photo-1679775634754-f7ca432b85d2?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-couch",
+                desc: "Gentle yet thorough upholstery cleaning for sofas, armchairs, and luxury seating. We remove micro-dust, food spills, and pet odors safely while protecting sensitive fabric integrity and colors."
+            },
+            {
+                id: 8,
+                title: "Grout cleaning services",
+                image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                icon: "fa-brush",
+                desc: "Targeted deep grout cleaning services that strip away dark mildew, soap scum, and discolored grease lines. Includes penetrating sealant application to prevent future moisture and stain penetration."
+            }
+        ];
+
+        // 5 Fully Detailed SEO Articles (800+ Words Each)
+        const blogsData = [
+            {
+                id: 1,
+                title: "Carpet Cleaning Services and Wood Floor Refinishing Near You in Montgomery, AL",
+                image: "https://plus.unsplash.com/premium_photo-1676810460522-bc963e5554d8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                excerpt: "Keeping your floors clean and well-maintained makes a big difference in your home or business. Carpets can collect dirt, dust, stains, and odors over time. Wood floors can also lose their shine due to scratches, daily wear, and foot traffic. Professional floor care helps restore their appearance and keeps your flooring looking its best...",
+                primaryKw: "Carpet cleaning services",
+                secondaryKw: "Wood floor refinishing near me",
+                content: `
+                <img src="https://plus.unsplash.com/premium_photo-1676810460522-bc963e5554d8?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" alt="Carpet Cleaning Services and Wood Floor Refinishing Near Me in Montgomery, AL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <p> Keeping your floors clean and well-maintained makes a big difference in your home or business. Carpets can collect dirt, dust, stains, and odors over time. Wood floors can also lose their shine due to scratches, daily wear, and foot traffic. Professional floor care helps restore their appearance and keeps your flooring looking its best.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Professional Carpet Cleaning Services in Montgomery, AL</h3>
+<p>Clean carpets make your home feel fresher and more comfortable. Regular vacuuming helps remove surface dirt, but it cannot reach all the dust and debris trapped deep inside carpet fibers. Professional <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">carpet cleaning services</a> help remove built-up dirt, stubborn stains, and unpleasant odors.
+Professional carpet cleaning can also help improve the appearance of older carpets. It is a good option for homes, offices, rental properties, and other commercial spaces. Regular cleaning helps maintain carpet fibers and keeps your floors looking clean for longer.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Why Does Professional Carpet Cleaning Matter?</h3>
+<p>Carpets experience daily wear from shoes, pets, spills, and regular household activities. Over time, these things can make carpets look dull and dirty. Professional cleaning helps address dirt and stains that ordinary household cleaning may leave behind.
+Here are some benefits of professional carpet cleaning:
+Removes deeply trapped dirt and debris.
+Helps reduce common carpet odors.
+Improves the appearance of carpet fibers.
+Helps manage allergens and dust buildup.
+Supports better carpet maintenance.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Wood Floor Refinishing Near Me for Beautiful Floors</h3>
+<p>Hardwood floors add warmth and character to any space. However, daily foot traffic, furniture movement, and accidental spills can leave scratches and worn areas. If your floors have lost their original appearance, searching for <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline"> wood floor refinishing near me </a> can help you find professional care.
+Wood floor refinishing helps restore the appearance of worn hardwood surfaces. Depending on the floor's condition, the process may include preparing the surface, sanding away the old finish, and applying a new protective coating. This can improve the look of your floors without replacing the entire surface.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Signs Your Wood Floors Need Refinishing</h3>
+<p>Not sure if your hardwood floors need refinishing? There are a few common signs to watch for. Addressing these problems early can help protect your flooring and prevent further wear.
+Look for these signs:
+Visible scratches and scuff marks.
+Faded or dull floor surfaces.
+Worn or peeling protective finishes.
+Water stains or discoloration.
+Areas that look different from the rest of the floor.
+If you notice these problems, professional refinishing may help restore your floors. A flooring professional can inspect the surface and recommend the right treatment.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Benefits of Professional Wood Floor Refinishing</h3>
+<p>Wood floor refinishing can improve both the appearance and protection of your hardwood floors. It gives worn surfaces a refreshed look and helps protect the wood from everyday use. It can also help extend the life of your existing flooring.
+Some important benefits include:
+Restores the natural appearance of hardwood.
+Reduces the visibility of surface scratches.
+Adds a fresh protective finish.
+Improves the overall look of your rooms.
+Helps you avoid premature floor replacement.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Choosing the Right Floor Cleaning Company</h3>
+<p>Choosing the right company is important when caring for your carpets and wood floors. You want professionals who understand different flooring materials and use suitable cleaning methods. Experience, attention to detail, and customer service should all be considered.
+Before scheduling a service, ask about the cleaning process and products used. Discuss any stains, scratches, or problem areas that need extra attention. A professional assessment can help you understand what your floors need and what results to expect.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Frequently Asked Questions</h3>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 1. How often should I schedule professional carpet cleaning?</h3>
+<p>Most homes benefit from professional carpet cleaning every 6 to 12 months. Homes with pets, children, or heavy foot traffic may need more frequent cleaning. Your cleaning schedule should depend on how quickly your carpets collect dirt and stains.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 2. Can professional carpet cleaning remove tough stains?</h3>
+<p>Professional carpet cleaning can remove many common stains, including dirt, food spills, and some pet stains. Results depend on the stain type, carpet material, and how long the stain has been present. Some older or permanent stains may not come out completely.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 3. How do I know when my wood floors need refinishing?</h3>
+<p>Scratches, dull surfaces, faded areas, and worn finishes are common signs that your wood floors may need refinishing. Water marks and discoloration can also indicate surface damage. A professional inspection can help determine the best solution.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 4. How long does wood floor refinishing take?</h3>
+<p>The time required depends on the size of the area, the condition of the wood, and the finishing products used. Some projects may take several days to complete. Your flooring professional can provide a more accurate timeline after inspecting the floors.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 5. Can carpet cleaning and wood floor refinishing improve my home's appearance?</h3>
+<p>Yes, both services can make a noticeable difference in your home's appearance. Clean carpets help rooms look fresher, while refinished hardwood floors can restore their natural beauty. Regular floor maintenance also helps protect your flooring investment.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Conclusion</h3>
+<p>Clean carpets and well-maintained wood floors can make your property more comfortable and attractive. Professional carpet cleaning services and wood floor refinishing near me can help address dirt, stains, scratches, and worn surfaces. For homeowners and businesses looking for professional floor care, Squeaky Clean Floors is the best company for these services in Montgomery, AL, and the surrounding areas. Contact Squeaky Clean Floors today to discuss your flooring needs and give your floors the attention they deserve.</p>
+
+
+                `
+            },
+            {
+                id: 2,
+                title: "Home Rug Cleaning Services in Montgomery, AL for Cleaner Living Spaces",
+                image: "https://plus.unsplash.com/premium_photo-1664303201536-bee55cef0d18?q=80&w=924&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                excerpt: "Keeping your floors clean is an important part of maintaining a comfortable and welcoming home. Rugs, carpets, and stone surfaces collect dirt, dust, stains, and everyday wear. Regular cleaning helps protect these surfaces and keeps your living spaces looking their best. Professional cleaning services can make a noticeable difference by removing stubborn dirt and helping maintain the appearance of your floors...",
+                primaryKw: "Home rug cleaning services",
+                secondaryKw: "Stone restoration near me",
+                content: `
+                <img src="https://plus.unsplash.com/premium_photo-1664303201536-bee55cef0d18?q=80&w=924&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
+                    <p>Keeping your floors clean is an important part of maintaining a comfortable and welcoming home. Rugs, carpets, and stone surfaces collect dirt, dust, stains, and everyday wear. Regular cleaning helps protect these surfaces and keeps your living spaces looking their best. Professional cleaning services can make a noticeable difference by removing stubborn dirt and helping maintain the appearance of your floors.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Benefits of Regular Rug and Carpet Cleaning</h3>
+<p>Regular <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline"> Home rug cleaning services</a> and carpet cleaning offers several benefits for homeowners. Dirt and debris can gradually affect the appearance and condition of fabric fibers. When left untreated, stains may become harder to remove. Professional cleaning helps address these problems before they become more difficult to manage.
+Another benefit is improved indoor cleanliness. Rugs can trap allergens, dust, and pet-related debris that circulate through your home. Removing these materials helps create a cleaner living environment. It also makes routine household maintenance easier.
+Professional cleaning can also help extend the useful life of your rugs. Different materials require different cleaning techniques. Experienced cleaners can identify the appropriate approach for each surface. This helps preserve the color, texture, and overall condition of your rugs.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Professional Stone Restoration for Long-Lasting Beauty</h3>
+<p>Natural stone floors and surfaces add lasting value to a property. Materials such as marble, granite, travertine, and limestone have unique appearances and maintenance requirements. Over time, these surfaces can develop scratches, dull spots, stains, and signs of wear. Regular household cleaning may not be enough to restore their original appearance.
+If you are searching for <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline"> Stone restoration near me </a>, professional care can help address common stone surface problems. Restoration services may include deep cleaning, polishing, honing, and sealing, depending on the material and its condition. These treatments help improve the appearance of worn stone surfaces. They also provide an opportunity to address issues before further deterioration occurs.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Common Signs Your Stone Floors Need Restoration</h3>
+<p>Stone floors do not always show damage immediately. Small scratches and dull areas may develop gradually. Knowing what to look for can help homeowners decide when professional attention is needed.
+Here are some common signs that your stone surfaces may need restoration:
+Dull appearance: Stone floors may lose their natural shine over time due to foot traffic.
+Visible scratches: Everyday use can leave marks on softer stone materials.
+Stubborn stains: Spills and other substances may penetrate porous stone surfaces.
+Uneven finish: Certain areas may appear different due to wear or previous cleaning methods.
+Etching: Acidic products can leave dull marks on marble and other sensitive stones.
+Addressing these problems with suitable restoration methods can improve the overall appearance of your floors. Professional assessment is important because different stones respond differently to cleaning and restoration products. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Choosing the Right Cleaning Company in Montgomery, AL</h3>
+<p>Choosing a professional cleaning company requires more than comparing prices. Homeowners should look for a service provider that understands different flooring materials and their maintenance needs. Proper equipment, suitable cleaning solutions, and careful work practices all matter.
+It is also helpful to choose a company that listens to your concerns. Every home has different cleaning requirements. Some rugs may need stain treatment, while others may require more delicate care. Stone floors may need polishing or sealing instead of basic cleaning.
+Squeaky Clean Floors is a local service provider offering floor cleaning and restoration solutions. Working with a professional team can help homeowners maintain their rugs, carpets, and stone surfaces. Before scheduling a service, discuss the condition of your floors and the results you hope to achieve. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> How Does Professional Cleaning Help Protect Your Investment?</h3>
+<p>Flooring is an important investment in any home. Rugs, carpets, and natural stone surfaces can last for many years when properly maintained. However, neglect and incorrect cleaning methods may cause unnecessary wear. Professional maintenance helps protect these materials and preserve their appearance.
+For example, using the wrong cleaning solution on a natural stone floor can cause discoloration or surface damage. Similarly, excessive moisture or unsuitable cleaning methods may affect delicate rug fibers. Professionals can select suitable treatments based on the material and its condition.
+Regular maintenance may also reduce the need for expensive repairs or replacement. Removing dirt and addressing stains early can help prevent long-term problems. A consistent cleaning schedule is a practical way to care for your home's flooring. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Tips for Maintaining Clean Rugs and Stone Floors</h3>
+<p>Professional cleaning works best when combined with regular home maintenance. A few simple habits can help keep your floors looking better between appointments. These steps are easy to follow and can reduce the amount of dirt and damage that builds up over time.
+Consider these maintenance tips:
+Vacuum rugs regularly to remove loose dirt and dust.
+Clean spills promptly using methods suitable for the material.
+Place doormats near entrances to reduce dirt entering your home.
+Avoid harsh chemicals on natural stone surfaces.
+Use protective pads beneath furniture to reduce scratches.
+Follow professional recommendations for stone sealing and rug maintenance.
+Schedule professional cleaning when your floors show signs of heavy use.
+These habits can help preserve your flooring and reduce everyday wear. Always check the manufacturer's care instructions before applying cleaning products to delicate materials. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Why Do Local Floor Cleaning Services Make a Difference?</h3>
+<p>Hiring a local cleaning company offers convenience and easier communication. You can discuss your cleaning concerns directly and explain which areas of your home need attention. Local service providers may also understand common household flooring needs in the surrounding community.
+Professional care is useful for both routine maintenance and more challenging cleaning projects. Whether your rugs have stubborn stains or your stone floors have lost their shine, the right cleaning approach matters. A professional assessment helps determine which services are appropriate.
+Homeowners in Montgomery and nearby communities can benefit from choosing a company that offers services suited to their flooring needs. Regularly caring for these surfaces helps maintain a cleaner and more inviting home.<p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Frequently Asked Questions</h3>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 1. How often should I have my rugs professionally cleaned?</h3>
+<p>The ideal cleaning schedule depends on household activity, pets, children, and the type of rug. Many households benefit from professional cleaning every 12 to 18 months. Homes with heavy foot traffic or pets may need more frequent attention.<p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 2. Can professional cleaning remove old rug stains?</h3>
+<p>Professional cleaning can help remove many types of stains. However, results depend on the stain, rug material, and how long the stain has been present. Some older stains may require specialized treatment and may not disappear completely.
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 3. What types of stone can be restored?</h3>
+Common stone restoration materials include marble, granite, travertine, and limestone. Each material requires a suitable restoration method. A professional assessment can help determine the right treatment for your specific surface.<p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 4. Does stone restoration include polishing and sealing?</h3>
+<p>Stone restoration may include cleaning, honing, polishing, and sealing. The exact services depend on the stone's condition and the homeowner's goals. Not every stone surface requires all these treatments.<p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> How can I schedule professional floor cleaning in Montgomery, AL?</h3>
+<p>You can contact a local floor cleaning company to discuss your needs and arrange an appointment. Explain whether you need rug cleaning, carpet care, or stone restoration. Ask about the recommended cleaning process and available services before scheduling.
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Conclusion</h3>
+<p>Clean rugs and well-maintained stone floors make a home more comfortable and attractive. Professional cleaning helps remove accumulated dirt, address stubborn stains, and protect flooring materials from unnecessary wear. Regular maintenance can also help extend the life of your rugs and stone surfaces.
+For professional floor cleaning and restoration solutions, consider Squeaky Clean Floors in Montgomery, AL, serving the surrounding areas. Their services can help homeowners maintain cleaner rugs and attractive stone surfaces.<p>
+
+                `
+            },
+            {
+                id: 3,
+                title: "Restore Your Floors with Professional Floor Polishing Services in Montgomery, AL",
+                image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                excerpt: "Floors are an important part of every home and business. They receive daily foot traffic, collect dirt, and experience regular wear and tear. Over time, even well-maintained floors can lose their shine and develop stains, scratches, and dull areas. Professional floor care can help restore their appearance and keep them looking clean for longer..",
+                primaryKw: "Floor polishing services in Montgomery, AL",
+                secondaryKw: "Grout cleaning services near me",
+                content: `
+                 <img src= "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
+                    <p>Floors are an important part of every home and business. They receive daily foot traffic, collect dirt, and experience regular wear and tear. Over time, even well-maintained floors can lose their shine and develop stains, scratches, and dull areas. Professional floor care can help restore their appearance and keep them looking clean for longer.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Enhance Your Property with Professional Floor Polishing</h3>
+<p>Clean and polished floors can make a noticeable difference in any property. They create a fresh appearance and help maintain a welcoming environment. However, regular sweeping and mopping may not be enough to remove stubborn dirt or restore the original shine of hard flooring surfaces.
+<a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">Floor polishing services in Montgomery, AL</a> can help improve the appearance of worn floors and bring back their natural finish. Professional polishing uses suitable equipment and techniques to address dullness, surface marks, and everyday buildup. It is a practical way to maintain flooring without replacing the entire surface.
+Different flooring materials require different care methods. Marble, tile, concrete, and other hard surfaces may need specific polishing techniques. Choosing an experienced cleaning company helps ensure that the right approach is used for your flooring type.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Professional Grout Cleaning for Cleaner Tile Floors</h3>
+<p>Tile floors are popular because they are practical, attractive, and suitable for many areas. However, grout lines can collect dirt, grease, moisture, and other debris. Their porous nature makes them especially difficult to clean with ordinary household products.
+<a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">Grout cleaning services near me</a> are a helpful option when regular mopping no longer removes the dirt trapped between tiles. Professional cleaning methods target buildup in grout lines and help improve the overall appearance of tiled surfaces. This can make kitchens, bathrooms, entryways, and other tiled areas look noticeably fresher.
+Dirty grout can affect the appearance of an otherwise clean floor. Darkened lines and stubborn stains can make tiles look older than they really are. Professional grout cleaning helps address these issues and supports better floor maintenance.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Benefits of Professional Grout Cleaning</h3>
+<p>Grout cleaning offers several benefits for residential and commercial properties. One major advantage is the removal of accumulated dirt that regular mopping often leaves behind. Cleaner grout lines can make the entire tiled surface look brighter.
+Another benefit is improved cleanliness. Grout can collect substances from daily use, including food particles, soap residue, and moisture-related buildup. Professional cleaning helps remove this unwanted material from hard-to-reach areas.
+Proper grout maintenance can also help preserve the appearance of tile flooring. When dirt and stains are allowed to build up for long periods, cleaning becomes more difficult. Scheduling professional cleaning when needed can help prevent excessive buildup.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Floor Cleaning Solutions for Homes and Businesses</h3>
+<p>Every property has different floor care requirements. A family home may experience spills, pet activity, and frequent foot traffic. Commercial properties may deal with heavier daily use and larger cleaning requirements.
+A professional cleaning company can assess the condition of the flooring before recommending a suitable service. This helps ensure that the cleaning process matches the material and its current condition. It also helps avoid unnecessary treatment.
+Residential floor cleaning can improve kitchens, bathrooms, bedrooms, and common living spaces. Commercial floor care can help maintain offices, retail stores, restaurants, and other business environments. Clean floors contribute to a more comfortable space for residents, employees, customers, and visitors.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Why Choose Squeaky Clean Floors?</h3>
+<p>Choosing the right floor cleaning company is important for achieving good results. You want a team that understands different flooring materials and uses appropriate cleaning methods. Experience, attention to detail, and customer service should all be considered when selecting a professional.
+Squeaky Clean Floors is a leading choice for property owners looking for professional floor care. The company serves residential and commercial customers who want to improve the appearance and cleanliness of their flooring. Its services are focused on helping customers maintain attractive floors through appropriate cleaning and polishing solutions.
+Working with a professional team can also save time and effort. Instead of repeatedly trying household products that may not remove stubborn buildup, property owners can seek specialized cleaning assistance. This makes professional floor care a useful option for busy households and businesses.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Signs Your Floors Need Professional Attention</h3>
+<p>It is not always easy to know when floors need professional cleaning or polishing. However, certain signs can indicate that regular maintenance is no longer enough. Recognizing these signs early can help prevent dirt and wear from becoming more difficult to address.
+Look for the following common issues:
+Dull surfaces: Floors that have lost their original shine may benefit from professional polishing.
+Stubborn stains: Marks that remain after normal cleaning may require specialized treatment.
+Dark grout lines: Discolored grout often indicates accumulated dirt and residue.
+Uneven appearance: Some areas may look noticeably different because of heavy foot traffic.
+Persistent dirt: Flooring that continues to look dirty after mopping may need deeper cleaning.
+If you notice any of these problems, consider arranging a professional assessment. The right service will depend on your flooring material and the type of damage or buildup present.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Tips for Maintaining Clean and Polished Floors</h3>
+<p>Professional floor care works best when combined with regular maintenance. Simple cleaning habits can help preserve the results and reduce the amount of dirt that collects on flooring surfaces. A consistent routine can also make future cleaning easier.
+Start by sweeping or vacuuming floors regularly. This removes loose dirt and debris that could scratch certain surfaces. Use cleaning products that are suitable for your specific flooring material.
+Wipe up spills as soon as possible. This is particularly important for tile, natural stone, and other surfaces that may be affected by certain liquids. Avoid using harsh chemicals unless the flooring manufacturer recommends them.
+Place entrance mats near doors to reduce the amount of dirt brought inside. Furniture pads can also help prevent scratches and marks. For tiled areas, pay attention to grout lines during routine cleaning so that dirt does not accumulate unnecessarily.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> How Often Should You Schedule Professional Floor Care?</h3>
+<p>The right cleaning schedule depends on several factors. These include the type of flooring, the amount of daily traffic, and the condition of the surface. A busy commercial property may need professional attention more frequently than a small residential space.
+Homes with pets, children, or large families may also experience faster dirt buildup. Kitchens and bathrooms often need additional attention because of moisture, spills, and regular use. Professional cleaning can help address buildup that ordinary maintenance does not remove.
+There is no single schedule that works for every property. A professional assessment can help determine when polishing or grout cleaning is appropriate. Maintaining a routine can help keep floors looking their best throughout the year.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">Frequently Asked Questions</h3>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 1. How long does professional floor polishing take?</h3>
+<p>The time required depends on the size of the area and the condition of the flooring. The type of material and the polishing method can also affect the process. A professional assessment can provide a better estimate for your property.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 2. Can professional grout cleaning remove dark stains?</h3>
+<p>Professional grout cleaning can remove many types of accumulated dirt and surface stains. However, some discoloration may be permanent or caused by damage beneath the surface. Results depend on the grout condition and the type of staining.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 3. Is professional floor polishing suitable for all flooring types?</h3>
+<p>Not every flooring material requires or can tolerate the same polishing method. Marble, concrete, and other hard surfaces may need different treatments. A professional should identify the material before recommending a polishing process.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 4. How can I keep grout lines clean after professional cleaning?</h3>
+<p>Regular sweeping and appropriate mopping can help prevent dirt from collecting in grout lines. Clean spills promptly and use products designed for your tile and grout. Professional maintenance when needed can also help preserve the results.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 5. Why should I hire a professional floor cleaning company?</h3>
+<p>Professional cleaners have access to specialized equipment and cleaning methods. They can identify the needs of different flooring materials and recommend suitable treatments. Hiring an experienced company can save time and help improve the overall appearance of your floors.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Conclusion</h3>
+<p>Clean floors can improve the appearance, comfort, and overall condition of your property. Whether your flooring has become dull or your grout lines have collected stubborn dirt, professional care can make a noticeable difference. Regular maintenance can also help protect your investment and reduce the need for expensive flooring replacements.
+Squeaky Clean Floors is proud to provide professional floor cleaning and polishing solutions in Montgomery, AL, and the surrounding areas. If your home or business needs expert attention, consider reaching out to the company to discuss your flooring requirements. Choose Squeaky Clean Floors in Montgomery, AL, for professional service focused on keeping your floors cleaner, fresher, and looking their best.</p>
+
+                `
+            },
+            {
+                id: 4,
+                title: "Wood Floor Sanding Service in Montgomery, AL for Beautiful Hardwood Floors",
+                image: "https://plus.unsplash.com/premium_photo-1683129616171-8d7b759b354c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                excerpt: "Keeping your floors and rugs clean can make a big difference in the appearance and comfort of your home. Hardwood floors can lose their shine over time due to daily foot traffic, scratches, and dust. Rugs can also collect dirt, stains, and allergens that regular vacuuming may not remove. Professional floor care helps maintain a cleaner living space and protects the condition of your flooring...",
+                primaryKw: " Wood floor sanding service in Montgomery, AL,",
+                secondaryKw: "In home rug cleaning near me ",
+                content: `
+                <image src= "https://plus.unsplash.com/premium_photo-1683129616171-8d7b759b354c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
+
+                    <p> Keeping your floors and rugs clean can make a big difference in the appearance and comfort of your home. Hardwood floors can lose their shine over time due to daily foot traffic, scratches, and dust. Rugs can also collect dirt, stains, and allergens that regular vacuuming may not remove. Professional floor care helps maintain a cleaner living space and protects the condition of your flooring.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Restore the Natural Beauty of Your Hardwood Floors</h3>
+<p>Hardwood floors add warmth and value to a home. However, everyday activities can leave them looking dull and worn. Furniture movement, pet activity, and regular walking can cause scratches and surface damage. Over time, these small issues can affect the overall appearance of your floors.
+Professional sanding helps remove the worn surface layer and prepares the wood for a fresh finish. This process can improve the appearance of older hardwood flooring and bring back its natural character. It also provides an opportunity to address minor surface imperfections.
+Choosing an experienced flooring company is important for getting good results. Proper equipment, careful preparation, and attention to detail all play a role in the outcome. Professional care can help your hardwood floors look better and remain attractive for years.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Benefits of Professional Wood Floor Sanding</h3>
+<p>Wood floor sanding offers several benefits for homeowners. One major advantage is that it can refresh floors that have become scratched, faded, or uneven in appearance. Instead of replacing the entire floor, sanding may provide an effective way to improve the existing wood.
+Another benefit is the opportunity to choose a new finish. Homeowners can select a finish that matches their interior design and personal preferences. A fresh finish also helps protect the wood from everyday wear.
+Professional sanding can also improve the overall appearance of a room. Clean, well-maintained hardwood floors make living spaces feel more inviting. With proper maintenance, refinished floors can continue looking attractive for many years.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Choosing a Wood Floor Sanding Service in Montgomery</h3>
+<p>When searching for a <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">Wood floor sanding service in Montgomery, AL</a>, it is important to consider the experience and quality of the company. Floor sanding requires the right tools and knowledge to achieve an even result. Poor sanding techniques can leave visible marks or damage the wood surface.
+Look for professionals who understand different hardwood types and finishing options. Every floor has its own condition and requirements. A proper assessment helps determine the right approach for the project.
+Communication is another important factor. A good flooring company should explain the process, expected results, and preparation requirements before starting the work. This helps homeowners understand what to expect and plan accordingly.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Keep Your Rugs Fresh With Professional Cleaning</h3>
+<p>Rugs play an important role in home comfort and interior design. They add color, provide warmth, and make rooms feel more comfortable. However, rugs also collect dust, dirt, pet hair, and other particles through everyday use.
+Vacuuming helps remove loose dirt from the surface, but it may not reach everything trapped within the fibers. Spills and stains can also become difficult to remove when left untreated. Professional rug cleaning helps address these issues with suitable cleaning methods.
+Regular rug care can improve the appearance of your home. It can also help extend the useful life of your rugs. The right cleaning approach depends on the rug's material, construction, and condition.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Why Does Professional Rug Cleaning Matter?</h3>
+<p>Different rugs require different cleaning techniques. Wool, synthetic, cotton, and delicate decorative rugs may react differently to cleaning products and moisture. Using the wrong method can cause fading, shrinkage, or fiber damage.
+Professional cleaners assess the rug before choosing a cleaning process. They consider the material, stains, and overall condition. This helps ensure that the cleaning method is appropriate for the specific rug.
+Professional cleaning can also help remove unpleasant odors caused by spills, pets, and trapped dirt. A properly cleaned rug can make a room feel fresher and more comfortable. Routine maintenance can also reduce the buildup of dirt that may damage rug fibers over time.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Finding In-Home Rug Cleaning Services Near Your Location</h3>
+<p> Finding <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">In home rug cleaning near me</a> can make it easier to maintain clean rugs without unnecessary hassle. In-home cleaning services are useful for homeowners who prefer professional assistance at their property. They can also help when moving large rugs or transporting delicate pieces is inconvenient.
+Before scheduling a service, ask about the cleaning methods available. Make sure the company understands the type of rug you own and any specific concerns you have. It is also helpful to discuss stains, odors, and areas that need extra attention.
+A professional assessment can help determine whether in-home cleaning is suitable for your rug. Some materials may require specialized treatment or a different cleaning process. Discussing these details in advance helps you make an informed decision.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> How to Maintain Hardwood Floors Between Professional Services?</h3>
+<p>Regular maintenance can help preserve the appearance of hardwood floors. Small daily habits can prevent dirt and debris from creating scratches. Using a soft-bristle broom or microfiber mop is a good way to remove loose particles.
+Place rugs or protective mats near entrances to reduce the amount of dirt brought inside. Furniture pads can also help prevent scratches when chairs and tables are moved. Avoid using excessive water because moisture can damage certain types of hardwood flooring.
+It is also important to follow the care instructions recommended for your floor's finish. Some cleaning products may leave residue or affect the protective coating. Proper cleaning habits can help maintain the results of professional sanding.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Tips for Keeping Your Rugs Cleaner for Longer</h3>
+<p>Rugs receive regular foot traffic, so consistent care is important. Vacuuming on a suitable schedule helps prevent dirt from settling deep into the fibers. High-traffic areas may need more frequent attention.
+Address spills as soon as possible. Blot the affected area with a clean cloth instead of rubbing it. Rubbing can spread the stain and push it deeper into the rug fibers.
+Rotating rugs occasionally can also help distribute wear more evenly. Keep rugs away from excessive moisture and follow the manufacturer's care recommendations. These simple steps can help maintain their appearance between professional cleanings.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Why Choose Squeaky Clean Floors?</h3>
+<p>Choosing the right company for floor and rug care can make your home maintenance easier. Squeaky Clean Floors provides floor sanding and rug cleaning services for homeowners looking to improve the condition of their flooring. Professional attention helps address common problems such as dull hardwood surfaces, accumulated dirt, and stubborn rug stains.
+Every home has different flooring needs. Some homeowners may need to refresh aging hardwood floors, while others may want to improve the cleanliness of their rugs. Having access to professional services makes it easier to care for different flooring surfaces.
+When comparing service providers, consider their experience, cleaning methods, communication, and attention to detail. Ask questions about the process before scheduling an appointment. These steps can help you choose a company that understands your expectations.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Frequently Asked Questions</h3>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 1. How often should hardwood floors be sanded?</h3>
+<p>The frequency depends on the type of wood, floor thickness, finish, and amount of daily traffic. Many hardwood floors can go several years before needing refinishing. A professional inspection can help determine whether sanding is necessary.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 2. Can sanding remove scratches from hardwood floors?</h3>
+<p>Yes, sanding can remove many surface scratches and signs of everyday wear. However, deep gouges or structural damage may require additional repairs. The condition of the wood determines what results are possible.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 3. How long does professional floor sanding take?</h3>
+<p>The timeline depends on the size of the area, the condition of the flooring, and the finishing process. Drying time between finish coats can also affect the schedule. Your flooring professional can provide a more accurate estimate after inspecting the floors.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 4. Is professional rug cleaning better than regular vacuuming?</h3>
+<p>Vacuuming is useful for removing loose dirt and surface debris. Professional cleaning can address deeper dirt, certain stains, and trapped odors. Both methods are important for maintaining rugs.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 5. How can I prepare my home for professional floor or rug cleaning?</h3>
+<p>Remove small furniture, personal belongings, and loose items from the work area when possible. Discuss large furniture and special cleaning requirements with the service provider beforehand. Follow any preparation instructions provided before the appointment.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Conclusion</h3>
+<p>Clean floors and fresh rugs can improve the comfort, appearance, and overall condition of your home. Professional sanding helps restore worn hardwood surfaces, while proper rug cleaning removes accumulated dirt and helps maintain rug fibers. Regular maintenance also plays an important role in protecting your flooring investment.
+For homeowners looking for professional floor sanding and rug cleaning, Squeaky Clean Floors is a great choice to consider in Montgomery, AL, and the surrounding areas. Their services can help you maintain attractive hardwood floors and cleaner rugs. Contact Squeaky Clean Floors to discuss your flooring needs and find the right service for your home.</p>
+
+
+                `
+            },
+            {
+                id: 5,
+                title: "Stone Polishing Service and Area Rug Cleaning Company in Montgomery, AL",
+                image: "https://images.unsplash.com/photo-1740657254989-42fe9c3b8cce?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+                excerpt: "Keeping your floors and rugs clean is an important part of maintaining a comfortable and welcoming property. Floors experience daily foot traffic, spills, dust, and other types of wear that can affect their appearance over time. Rugs also collect dirt, allergens, and debris that regular vacuuming may not remove. Professional cleaning and maintenance can help protect these surfaces and keep your home or business looking its best...",
+                primaryKw: "Floor polishing services in Montgomery, AL",
+                secondaryKw: "Grout cleaning services near me",
+                content: `
+
+                <image src= "https://images.unsplash.com/photo-1740657254989-42fe9c3b8cce?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" >
+                    <p>Selecting the right floor care partner is essential for guaranteeing long-term durability and beautiful interior spaces. Skilled contractors combine advanced machinery with proven restoration methods.</p>
+
+                    <p> Keeping your floors and rugs clean is an important part of maintaining a comfortable and welcoming property. Floors experience daily foot traffic, spills, dust, and other types of wear that can affect their appearance over time. Rugs also collect dirt, allergens, and debris that regular vacuuming may not remove. Professional cleaning and maintenance can help protect these surfaces and keep your home or business looking its best.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Restore the Natural Beauty of Your Stone Floors</h3>
+<p> Stone floors add durability and style to residential and commercial spaces. However, regular use can cause scratches, dull spots, stains, and a loss of natural shine. Dirt and grime can also settle into small openings in the stone, making the surface look older than it really is.
+Professional <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">Stone polishing service</a> can help restore the appearance of natural stone surfaces. The process involves using specialized equipment and suitable polishing products to improve the surface finish. It can reduce the appearance of minor scratches, remove surface imperfections, and bring back a cleaner, more even appearance.
+Different types of stone require different care methods. Marble, granite, limestone, and travertine do not all respond to the same cleaning products or polishing techniques. Professional attention helps ensure that the correct approach is used for each material.
+Regular stone maintenance can also help prevent dirt buildup and surface damage. It is a practical way to protect your flooring investment. With proper care, stone floors can continue to look attractive and serve your property for many years.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Professional Rug Cleaning for a Healthier Home</h3>
+<p> Area rugs add comfort and character to living rooms, bedrooms, offices, and other spaces. However, they also collect dust, pet hair, food particles, and everyday dirt. These materials can become trapped deep within the rug fibers, even when the surface looks relatively clean.
+Choosing an experienced <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="text-brand-orange underline">Area rug cleaning company</a> can help remove accumulated dirt and improve the overall condition of your rugs. Professional cleaning methods are selected according to the rug's material, construction, and cleaning requirements. This helps protect delicate fibers while addressing common cleaning concerns.
+Different rugs need different levels of care. Wool, synthetic, cotton, and specialty rugs may require different cleaning products and techniques. Using the wrong method can cause problems such as color fading, shrinkage, or fiber damage.
+Professional cleaning can also help address common issues such as food stains, pet accidents, unpleasant odors, and visible dirt. While results depend on the rug's condition and the type of stain, proper treatment can make a noticeable difference.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Benefits of Hiring Experienced Cleaning Professionals</h3>
+<p> Hiring trained cleaning professionals offers several advantages over relying only on basic household cleaning methods. Professional cleaners have access to equipment designed to handle different surfaces and cleaning challenges. They also understand that each flooring material needs an appropriate treatment method.
+Here are some important benefits of professional cleaning services:
+Better dirt removal: Professional equipment can help remove dirt and debris that ordinary cleaning methods may leave behind.
+Improved appearance: Proper cleaning can refresh dull-looking floors and rugs.
+Surface protection: Suitable cleaning methods help reduce the risk of damage caused by harsh products or incorrect techniques.
+Odor treatment: Professional cleaning can help address odors caused by dirt, spills, and everyday use.
+Long-term maintenance: Regular professional care helps maintain the condition of flooring and rugs.
+More comfortable spaces: Cleaner surfaces contribute to a fresher and more pleasant indoor environment.
+These benefits make professional cleaning a valuable option for homeowners and business owners. The right maintenance plan can help keep different surfaces in better condition throughout the year.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Residential and Commercial Cleaning Solutions</h3>
+<p> Every property has different cleaning requirements. Residential properties often need attention to living room floors, kitchen surfaces, bedrooms, hallways, and decorative rugs. Families may also need additional cleaning because of children, pets, and frequent daily activity.
+Commercial properties face different challenges. Offices, retail stores, reception areas, and other workplaces often experience heavy foot traffic. This can cause dirt to accumulate faster and make floors look worn or neglected.
+Professional cleaning helps address these needs with methods suited to the property and surface type. Businesses can benefit from scheduled maintenance to keep their spaces presentable. Homeowners can arrange cleaning when needed to refresh their interiors and maintain their flooring.
+It is also important to consider the timing of cleaning services. Some areas may require more frequent attention than others. A professional assessment can help determine the appropriate cleaning approach based on the property's condition and daily use.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> How to Maintain Clean Floors and Rugs Between Professional Visits ?</h3>
+<p> Professional cleaning delivers important benefits, but everyday care also plays a major role in maintaining clean surfaces. Simple habits can reduce dirt buildup and help protect your flooring between appointments.
+Consider following these maintenance tips:
+Vacuum rugs regularly: Frequent vacuuming helps remove loose dirt before it becomes trapped in the fibers.
+Clean spills quickly: Address spills as soon as possible to reduce the chance of permanent staining.
+Use suitable cleaning products: Always select products designed for your specific flooring or rug material.
+Place mats near entrances: Entry mats help reduce the amount of dirt and moisture brought inside.
+Avoid excessive water: Too much moisture can damage certain stone surfaces and rug materials.
+Move furniture carefully: Use protective pads when moving furniture to help prevent scratches and marks.
+Schedule professional maintenance: Periodic cleaning helps address dirt and buildup that regular household care may not remove.
+These habits are easy to include in your daily routine. They can help maintain a cleaner environment and reduce unnecessary wear on your floors and rugs.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Why Choose Professional Cleaning Services?</h3>
+<p>Choosing the right cleaning provider is important when you want to protect your floors and rugs. Experience, suitable equipment, attention to detail, and an understanding of different materials all matter. A professional team should consider the condition of the surface before deciding which cleaning method to use.
+Good communication is another important part of the experience. Customers should understand what a service includes and what results they can reasonably expect. This helps avoid confusion and makes it easier to choose the right service for a particular cleaning concern.
+Squeaky Clean Floors is committed to helping customers maintain attractive and clean surfaces. Whether a property needs attention for stone flooring or area rugs, choosing the appropriate cleaning approach can make a meaningful difference. Professional care helps homeowners and businesses maintain their spaces while protecting the surfaces they use every day.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Frequently Asked Questions</h3>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 1. How often should stone floors be professionally polished?</h3>
+<p>The frequency depends on the type of stone, the amount of foot traffic, and the condition of the surface. Floors in busy commercial spaces may need attention more often than residential floors. Regular cleaning and proper maintenance can help preserve the finish. A professional assessment can help determine when polishing is appropriate. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 2. Can professional cleaning remove stains from area rugs?</h3>
+<p>Professional cleaning can help remove many common stains, including dirt, food spills, and some pet-related stains. However, results depend on the stain type, how long it has been present, and the rug material. Some stains may have permanently affected the fibers or dyes. Prompt treatment generally improves the chances of successful stain removal. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 3. Is professional rug cleaning safe for delicate rugs?</h3>
+<p>Professional cleaning can be suitable for delicate rugs when the correct methods are used. Different fibers and dyes require different cleaning approaches. A professional should consider the rug's material, construction, and condition before starting. This helps reduce the risk of shrinkage, color bleeding, and fiber damage. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 4. Why should I hire professionals instead of cleaning floors myself?</h3>
+Professional cleaners have access to specialized equipment and products designed for different flooring materials. They can address deeper dirt and buildup that routine household cleaning may not remove. They also understand the importance of selecting suitable cleaning techniques. This can help protect your surfaces and maintain their appearance.</p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> 5. Do professional floor and rug cleaning services benefit commercial properties?</h3>
+<p>Yes, professional cleaning can help businesses maintain cleaner and more presentable environments. Commercial floors and rugs often experience heavy daily use, which leads to faster dirt accumulation. Regular maintenance can improve appearance and help protect flooring materials. It can also create a more welcoming environment for customers, employees, and visitors. </p>
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2"> Contact Squeaky Clean Floors for Professional Cleaning in Montgomery, AL</h3>
+<p> Clean floors and well-maintained rugs can make a major difference in the appearance and comfort of your property. Professional care helps address everyday dirt, surface wear, stains, and other cleaning concerns. With the right maintenance, you can protect your flooring investment and enjoy a cleaner indoor environment.
+For professional floor and rug cleaning solutions, choose Squeaky Clean Floors, the best company for these services in Montgomery, AL, and the surrounding areas. Whether you need stone floor maintenance or professional rug cleaning, their services can help keep your property looking fresh and inviting. Contact Squeaky Clean Floors today to learn more about available services and schedule your cleaning appointment. </p>
+
+                `
+            }
+        ];
+
+        // Dynamic Navigation Page Switcher
+        function navigateTo(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Show target page
+            const target = document.getElementById('page-' + pageId);
+            if (target) {
+                target.classList.remove('hidden');
+            }
+
+            // Update active navbar state
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-brand-orange');
+            });
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.classList.add('text-brand-orange');
+            }
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = "fa-solid fa-bars text-2xl";
+            } else {
+                icon.className = "fa-solid fa-xmark text-2xl";
+            }
+        }
+
+        // Render Services Cards in Grid
+        function renderServices() {
+            const renderCard = (s) => `
+                <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative overflow-hidden h-52 cursor-pointer" onclick="openServiceModal(${s.id})">
+                        <img src="${s.image}" alt="${s.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Middle Pop Up Hover Layer -->
+                        <div class="overlay absolute inset-0 bg-brand-blue/80 backdrop-blur-xs flex items-center justify-center p-4">
+                            <div class="w-16 h-16 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl shadow-xl transform transition-transform group-hover:rotate-12">
+                                <i class="fa-solid ${s.icon}"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-orange transition-colors">${s.title}</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">${s.desc}</p>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/piFYPbTwKKXZv5cX8" target="_blank" class="w-full text-center bg-slate-900 hover:bg-brand-orange text-white font-bold py-3 rounded-xl transition-colors block text-sm shadow-md">
+                            Get A Quote
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            const homeGrid = document.getElementById('home-services-grid');
+            const allGrid = document.getElementById('all-services-grid');
+
+            if (homeGrid) homeGrid.innerHTML = servicesData.map(renderCard).join('');
+            if (allGrid) allGrid.innerHTML = servicesData.map(renderCard).join('');
+        }
+
+        // Service Modal Popup Handlers
+        function openServiceModal(id) {
+            const s = servicesData.find(item => item.id === id);
+            if (!s) return;
+            document.getElementById('modal-service-img').src = s.image;
+            document.getElementById('modal-service-title').innerText = s.title;
+            document.getElementById('modal-service-desc').innerText = s.desc;
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+
+        // Render Blog Cards
+        function renderBlogs() {
+            const renderCard = (b) => `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200 flex flex-col justify-between group hover:shadow-xl transition-all">
+                    <div class="overflow-hidden h-52">
+                        <img src="${b.image}" alt="${b.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">Floor Care Guide</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1 leading-snug group-hover:text-brand-blue transition-colors">${b.title}</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mt-2">${b.excerpt}</p>
+                        </div>
+                        <button onclick="openBlogModal(${b.id})" class="w-full bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-800 font-bold py-3 rounded-xl transition-all text-sm flex items-center justify-center gap-2">
+                            <span>Read Full Article</span>
+                            <i class="fa-solid fa-book-open text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const homeBlogs = document.getElementById('home-blogs-container');
+            const allBlogs = document.getElementById('all-blogs-grid');
+
+            if (homeBlogs) homeBlogs.innerHTML = blogsData.slice(0, 3).map(renderCard).join('');
+            if (allBlogs) allBlogs.innerHTML = blogsData.map(renderCard).join('');
+        }
+
+        // Blog Modal Reader Handlers
+        function openBlogModal(id) {
+            const b = blogsData.find(item => item.id === id);
+            if (!b) return;
+            document.getElementById('blog-modal-title').innerText = b.title;
+            document.getElementById('blog-modal-body').innerHTML = b.content;
+            document.getElementById('blog-modal').classList.remove('hidden');
+        }
+        function closeBlogModal() {
+            document.getElementById('blog-modal').classList.add('hidden');
+        }
+
+        // 3D Carousel Rotation Logic for Hero Section
+        let carouselAngle = 0;
+        function rotateCarousel(direction) {
+            const cards = document.querySelectorAll('.carousel-card');
+            if (cards.length === 0) return;
+            carouselAngle += direction * 90;
+            cards.forEach((card, idx) => {
+                const currentAngle = (idx * 90) + carouselAngle;
+                const rad = currentAngle * (Math.PI / 180);
+                const tz = 180;
+                const tx = Math.sin(rad) * 160;
+                const scale = (Math.cos(rad) + 1.5) / 2.5;
+                const opacity = Math.cos(rad) > -0.2 ? 1 : 0.2;
+
+                card.style.transform = `translateX(${tx}px) translateZ(${Math.cos(rad) * tz}px) scale(${scale})`;
+                card.style.zIndex = Math.round((Math.cos(rad) + 1) * 100);
+                card.style.opacity = opacity;
+            });
+        }
+
+        // Reviews Carousel Logic
+        let currentReviewIndex = 0;
+        function updateReviewSlider() {
+            const track = document.getElementById('reviews-track');
+            if (!track) return;
+            track.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+            
+            // Update dots
+            const dots = document.querySelectorAll('#review-dots span');
+            dots.forEach((dot, idx) => {
+                if (idx === currentReviewIndex) {
+                    dot.className = "w-3 h-3 rounded-full bg-brand-orange cursor-pointer";
+                } else {
+                    dot.className = "w-3 h-3 rounded-full bg-slate-700 cursor-pointer";
+                }
+            });
+        }
+        function nextReviewSlide() {
+            currentReviewIndex = (currentReviewIndex + 1) % 3;
+            updateReviewSlider();
+        }
+        function prevReviewSlide() {
+            currentReviewIndex = (currentReviewIndex - 1 + 3) % 3;
+            updateReviewSlider();
+        }
+        function goToReviewSlide(index) {
+            currentReviewIndex = index;
+            updateReviewSlider();
+        }
+
+        // Mirror FAQ section content to About Us Page for completeness
+        function duplicateFaqs() {
+            const mainFaq = document.querySelector('#faq-section .space-y-4');
+            const aboutFaq = document.getElementById('about-faq-container');
+            if (mainFaq && aboutFaq) {
+                aboutFaq.innerHTML = mainFaq.innerHTML;
+            }
+        }
+
+        // Initializer
+        window.addEventListener('DOMContentLoaded', () => {
+            renderServices();
+            renderBlogs();
+            rotateCarousel(0);
+            duplicateFaqs();
+
+            // Auto-rotate 3D hero slider every 4 seconds
+            setInterval(() => {
+                rotateCarousel(1);
+            }, 4000);
+
+            // Close modals when clicking backdrop
+            document.getElementById('service-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'service-modal') closeServiceModal();
+            });
+            document.getElementById('blog-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'blog-modal') closeBlogModal();
+            });
+        });
+    </script>
+
+</body>
+</html>
